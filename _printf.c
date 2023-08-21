@@ -9,9 +9,9 @@
  * Return: 0
  */
 
-int _case(const char *format, int i, va_list args, int *n)
+int _case(const char *format, int i, va_list args)
 {
-	int j, len = 0;
+	int j, len = 0, n = 0;
 	char c;
 	char *s;
 
@@ -59,7 +59,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			n = n + _case(format, i, args, &n);
+			n = n + _case(format, i, args);
 			i += 2;
 		}
 		else
