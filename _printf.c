@@ -8,9 +8,8 @@
  * Return: 0
  */
 
-int _case(const char *format, int i, va_list args)
+int _case(const char *format, int i, va_list args, int *n)
 {
-	int j = 0, n = 0;
 	char c;
 	char *s;
 
@@ -18,28 +17,28 @@ int _case(const char *format, int i, va_list args)
 	{
 		c = va_arg(args, int);
 		_putchar(c);
-		n++;
+		(*n)++;
 	}
 	else if (format[i + 1] == 's')
 	{
 		s = va_arg(args, char *);
-		_putstr(s, &n);
+		_putstr(s, n);
 	}
 	else if (format[i + 1] == '%')
 	{
 		_putchar(format[(i + 1)]);
-		n++;
+		(*n)++;
 	}
 	else if (format[i + 1] == 'b')
-		_binary(va_arg(args, unsigned int), &n);
+		_binary(va_arg(args, unsigned int), n);
 
 	else
 	{
 		_putchar('%');
 		_putchar(format[(i + 1)]);
-		n = n + 2;
+		(*n) = (*n) + 2;
 	}
-	return (n);
+	return (*n);
 }
 
 /**
@@ -72,7 +71,7 @@ int _printf(const char *format, ...)
 				va_end(args);
 				return (-1);
 			}
-			n = n + _case(format, i, args);
+			n = n + _case(format, i, args, &n);
 			i += 1;
 		}
 		else

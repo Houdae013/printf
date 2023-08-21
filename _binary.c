@@ -6,7 +6,7 @@
  * Return: 0
  */
 
-int _binary(unsigned int b, int &n)
+int _binary(unsigned int b, *n)
 {
 	if (b == 0)
 		_putchar('0');
@@ -22,7 +22,7 @@ int _binary(unsigned int b, int &n)
 			b = b / 2;
 			_putchar('1');
 		}
-		n = n + 1
+		(*n)++;
 	}
 	return (0);
 }
