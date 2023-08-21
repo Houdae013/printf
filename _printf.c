@@ -11,7 +11,7 @@
 
 int _case(const char *format, int i, va_list args)
 {
-	int j, len = 0, n = 0;
+	int j = 0, n = 0;
 	char c;
 	char *s;
 
@@ -24,11 +24,11 @@ int _case(const char *format, int i, va_list args)
 	else if (format[i + 1] == 's')
 	{
 		s = va_arg(args, char *);
-		len = strlen(s);
-		for (j = 0; j < len; j++)
+		while (s[j] != '\0')
 		{
 			_putchar(s[j]);
 			n = n + 1;
+			j++;
 		}
 	}
 	else if (format[i + 1] == '%')
