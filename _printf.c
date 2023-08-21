@@ -23,20 +23,16 @@ int _case(const char *format, int i, va_list args)
 	else if (format[i + 1] == 's')
 	{
 		s = va_arg(args, char *);
-		if  (s == NULL)
-			s = "(null)";
-		while (s[j] != '\0')
-		{
-			_putchar(s[j]);
-			n = n + 1;
-			j++;
-		}
+		_putstr(s, &n);
 	}
 	else if (format[i + 1] == '%')
 	{
 		_putchar(format[(i + 1)]);
 		n++;
 	}
+	else if (format[i + 1] == 'b')
+		_binary(va_arg(args, unsigned int), &n);
+
 	else
 	{
 		_putchar('%');
