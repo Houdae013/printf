@@ -57,11 +57,11 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(format[i + 1]);
+			_putchar(format[i]);
 			n++;
 		}	
-		va_end(args);
 		i++;
 	}
+	va_end(args);
 	return (n);
 }
