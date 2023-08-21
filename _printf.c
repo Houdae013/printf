@@ -37,7 +37,10 @@ int _case(const char *format, int i, va_list args)
 		n++;
 	}
 	else
-		return (-1);
+	{
+		_putchar('%');
+		_putchar(format[(i + 1)];
+		n = n + 2;
 	return (n);
 }
 
@@ -67,12 +70,6 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
-			{
-				va_end(args);
-				return (-1);
-			}
-
-			if ( _case(format, i, args) == -1)
 			{
 				va_end(args);
 				return (-1);
