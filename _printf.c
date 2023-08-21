@@ -5,7 +5,6 @@
  * @format: h
  * @i: int
  * @args: arg
- * @n: pointer
  * Return: 0
  */
 
