@@ -32,8 +32,17 @@ int _printf(const char *format, ...)
 				len = strlen(s);
 				for (j = 0; j < len - 1; j++)
 				{
-					_putchar(s[j]);
-					n = n + 1;
+					if (s[j] == '\n')
+					{
+						_putchar('\n');
+						_putchar('\r');
+						n++;
+					}
+					else
+					{
+						_putchar(s[j]);
+						n = n + 1;
+					}
 				}
 				i++;
 			}
