@@ -72,7 +72,7 @@ int _printf(const char *format, ...)
 				va_end(args);
 				return (-1);
 			}
-			n = n + _case(format, i, args, &n);
+			n = n + _case(format, i, args);
 			i += 1;
 		}
 		else
