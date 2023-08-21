@@ -6,7 +6,7 @@
  * Return: 0
  */
 
-int _binary(unsigned int b, *n)
+int _binary(unsigned int b, int *n)
 {
 	if (b == 0)
 		_putchar('0');
