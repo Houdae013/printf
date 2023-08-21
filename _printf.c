@@ -8,7 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, n = 0;
+	int i = 0, n = 0, j ,len;
 	char c;
 	char *s;
 
@@ -29,8 +29,12 @@ int _printf(const char *format, ...)
 			else if (format[i + 1] == 's')
 			{
 				s = va_arg(args, char*);
-				write(1, s, strlen(s));
-				n = n + strlen(s);
+				len = strlen(s);
+				for (j = 0; j < len; j++)
+				{
+					write(1, &s[j], 1);
+					n = n + 1;
+				}
 				i++;
 			}
 			else if (format[i + 1] == '%')
@@ -42,6 +46,7 @@ int _printf(const char *format, ...)
 		}
 		else
 			write(1, &format[i], 1);
+		va_end(args);
 		i++;
 	}
 	return (n);
