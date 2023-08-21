@@ -60,7 +60,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			n = n + _case(format, i, args);
-			i += 2;
+			i += 1;
 		}
 		else
 		{
