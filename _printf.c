@@ -39,8 +39,9 @@ int _case(const char *format, int i, va_list args)
 	else
 	{
 		_putchar('%');
-		_putchar(format[(i + 1)];
+		_putchar(format[(i + 1)]);
 		n = n + 2;
+	}
 	return (n);
 }
 
