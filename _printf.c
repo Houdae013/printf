@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i + 1] == 's')
 			{
-				s = va_arg(args, char*);
+				s = va_arg(args, char *);
 				len = strlen(s);
 				for (j = 0; j < len - 1; j++)
 				{
