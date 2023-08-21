@@ -56,13 +56,19 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 
 	if (format == NULL)
+	{
+		va_end(args);
 		return (-1);
+	}
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
+			{
+				va_end(args);
 				return (-1);
+			}
 			n = n + _case(format, i, args);
 			i += 1;
 		}
