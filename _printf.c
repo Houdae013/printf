@@ -59,6 +59,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+				return (-1);
 			n = n + _case(format, i, args);
 			i += 1;
 		}
