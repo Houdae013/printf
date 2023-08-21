@@ -34,9 +34,9 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i + 1] == 's')
 			{
-				s = va_arg(args, char*);
+				s = va_arg(args, *char);
 				len = strlen(s);
-				for (j = 0; j < len; j++)
+				for (j = 0; j < len - 1; j++)
 				{
 					write(1, &s[j], 1);
 					n = n + 1;
@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 				i++;
 			}
 			else
-				return (0);
+				return (-1);
 		}
 		else
 			write(1, &format[i], 1);
