@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			{
 				s = va_arg(args, char *);
 				len = strlen(s);
-				for (j = 0; j < len - 1; j++)
+				for (j = 0; j < len; j++)
 				{
 					if (s[j] == '\n')
 					{
@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i + 1] == '%')
 			{
-				_putchar(format[*(i + 1)]);
+				_putchar(format[(i + 1)]);
 				n++;
 				i++;
 			}
