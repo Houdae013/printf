@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 				i++;
 			}
 			else
-				return (-1);
+				return (0);
 		}
 		else
 			write(1, &format[i], 1);
