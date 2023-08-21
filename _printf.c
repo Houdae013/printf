@@ -24,7 +24,7 @@ int _case(const char *format, int i, va_list args)
 	{
 		s = va_arg(args, char *);
 		if  (s == NULL)
-			s = "null";
+			s = "(null)";
 		while (s[j] != '\0')
 		{
 			_putchar(s[j]);
