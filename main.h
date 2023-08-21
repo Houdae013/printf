@@ -10,5 +10,6 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
+int _case(const char *format, int i, va_list args, int *n);
 
 #endif
