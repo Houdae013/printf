@@ -6,8 +6,10 @@
  * Return: 0
  */
 
-int _binary(unsigned int b, int *n)
+int _binary(unsigned int b)
 {
+	int n = 0;
+
 	if (b == 0)
 		_putchar('0');
 	while (b > 0)
@@ -22,7 +24,7 @@ int _binary(unsigned int b, int *n)
 			b = b / 2;
 			_putchar('1');
 		}
-		(*n)++;
+		n++;
 	}
-	return (0);
+	return (n);
 }

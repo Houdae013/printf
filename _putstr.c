@@ -6,17 +6,17 @@
  * Return: n
  */
 
-int _putstr(char *s, int *n)
+int _putstr(char *s)
 {
-	int j = 0;
+	int j = 0, n = 0;
 
 	if  (s == NULL)
 		s = "(null)";
 	while (s[j] != '\0')
 	{
 		_putchar(s[j]);
-		(*n)++;
+		n++;
 		j++;
 	}
-	return (0);
+	return (n);
 }
