@@ -28,6 +28,10 @@ int _printf(const char *format, ...)
 				n++;
 				i++;
 			}
+			else if (format[i + 1] == '\0')
+			{
+				return (-1);
+			}
 			else if (format[i + 1] == 's')
 			{
 				s = va_arg(args, char*);
