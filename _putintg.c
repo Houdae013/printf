@@ -28,12 +28,12 @@ int _putintg(int d)
 	m = n;
 	while (m > 0)
 	{
-		if ( z < 0)
+		if (z < 0)
 		{
 			_putchar('-');
 			z = 1;
 		}
-		_putchar(s[m-1]);
+		_putchar(s[m - 1]);
 		m--;
 	}
 	return (n + z);
