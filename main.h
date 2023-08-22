@@ -14,5 +14,9 @@ int _putstr(char *s);
 int _binary(unsigned int b);
 int _case(const char *format, int i, va_list args);
 int _putintg(int d);
+int _convertu(unsigned int u);
+int _converto(unsigned int o);
+int _convertx(unsigned int x);
+int _convertX(unsigned int X);
 
 #endif

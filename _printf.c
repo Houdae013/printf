@@ -10,28 +10,22 @@
 
 int _case(const char *format, int i, va_list args)
 {
-	char c;
 	int n = 0;
-	char *s;
 	int d;
 
 	if (format[i + 1] == 'c')
 	{
-		c = va_arg(args, int);
-		_putchar(c);
+		_putchar(va_arg(args, int));
 		n++;
 	}
 	else if (format[i + 1] == 's')
-	{
-		s = va_arg(args, char *);
-		n = n + _putstr(s);
-	}
+		n = n + _putstr(va_arg(args, char *));
 	else if (format[i + 1] == '%')
 	{
 		_putchar(format[(i + 1)]);
 		n++;
 	}
-	else if (format[(i + 1)] == 'd' || format[(i + 1) == 'i')
+	else if (format[(i + 1)] == 'd' || format[(i + 1)] == 'i')
 	{
 		d = va_arg(args, int);
 		n = n + _putintg(d);
@@ -39,7 +33,14 @@ int _case(const char *format, int i, va_list args)
 	}
 	else if (format[i + 1] == 'b')
 		n = n + _binary(va_arg(args, unsigned int));
-
+	else if (format[i + 1] == 'u')
+		n = n + _convertu(va_arg(args, unsigned int));
+	else if (format[i + 1] == 'o')
+		n = n + _converto(va_arg(args, unsigned int));
+	else if (format[i + 1] == 'x')
+		n = n + _convertx(va_arg(args, unsigned int));
+	else if (format[i + 1] == 'X')
+		n = n + _convertX(va_arg(args, unsigned int));
 	else
 	{
 		_putchar('%');
