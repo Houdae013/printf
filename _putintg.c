@@ -11,6 +11,9 @@ int _putintg(int d)
 	int n = 0, co = 0, m = 0, z = 0;
 	char s[100];
 
+	if (d >= 2147483648 || d <= -2147483648)
+		return(_putstr(d));
+
 	if (d == 0)
 		return (1);
 	while (d != 0)
@@ -37,4 +40,5 @@ int _putintg(int d)
 		m--;
 	}
 	return (n + z);
+	if (
 }
