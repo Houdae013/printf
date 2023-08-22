@@ -13,5 +13,6 @@ int _putchar(char c);
 int _putstr(char *s);
 int _binary(unsigned int b);
 int _case(const char *format, int i, va_list args);
+int _putintg(int *in);
 
 #endif
