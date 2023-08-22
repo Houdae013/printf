@@ -12,7 +12,7 @@ int _putintg(int d)
 	char s[100];
 	if (d == 0)
 	return (1);
-		11	        while (d != 0)
+	while (d != 0)
 			12	        {
 				13	                
 					14	                co=d%10;
