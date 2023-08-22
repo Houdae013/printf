@@ -5,7 +5,7 @@
  * @format: h
  * @i: int
  * @args: arg
- * Return: 0
+ * Return: n
  */
 
 int _case(const char *format, int i, va_list args)
@@ -33,14 +33,6 @@ int _case(const char *format, int i, va_list args)
 	}
 	else if (format[i + 1] == 'b')
 		n = n + _binary(va_arg(args, unsigned int));
-	else if (format[i + 1] == 'u')
-		n = n + _convertu(va_arg(args, unsigned int));
-	else if (format[i + 1] == 'o')
-		n = n + _converto(va_arg(args, unsigned int));
-	else if (format[i + 1] == 'x')
-		n = n + _convertx(va_arg(args, unsigned int));
-	else if (format[i + 1] == 'X')
-		n = n + _convertX(va_arg(args, unsigned int));
 	else
 	{
 		_putchar('%');
