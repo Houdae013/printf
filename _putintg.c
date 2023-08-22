@@ -40,5 +40,4 @@ int _putintg(int d)
 		m--;
 	}
 	return (n + z);
-	if (
 }
