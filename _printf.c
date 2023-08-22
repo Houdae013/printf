@@ -13,6 +13,7 @@ int _case(const char *format, int i, va_list args)
 	char c;
 	int n = 0;
 	char *s;
+	int d;
 
 	if (format[i + 1] == 'c')
 	{
@@ -30,6 +31,10 @@ int _case(const char *format, int i, va_list args)
 		_putchar(format[(i + 1)]);
 		n++;
 	}
+	else if (format[(i + 1)] == 'd')
+	{
+		d = va_arg(args,int);
+	}	
 	else if (format[i + 1] == 'b')
 		n = n + _binary(va_arg(args, unsigned int));
 
