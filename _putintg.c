@@ -5,17 +5,20 @@
  * return n
  */
 
-int _putintg(int *in)
+int _putintg(int d)
 {
+
 	int n = 0, co = 0;
-	if (in == NULL)
-	if (in == 0)
+	if (d == NULL)
+	{
+		return 0;
+	}	
+	if (d == 0)
 		return 1;
-	while (in != 0)
+	while (d != 0)
 	{ 
-		in /= 10;
-		co++;
-		n++
+		d /= 10;
+		n++ ;
 	}
 	return n;
 }
