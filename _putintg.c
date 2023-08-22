@@ -13,14 +13,13 @@ int _putintg(int d)
 	if (d == 0)
 	return (1);
 	while (d != 0)
-			12	        {
-				13	                
-					14	                co=d%10;
-				15	                d=d/10;
-				16	                s[n]='0'+co;
-				17	                n++;
-				18	        }
-		19	        m=n;
+	{
+	co=d%10;
+	d=d/10;
+	s[n]='0'+co;
+	n++;
+	}
+	m=n;
 		20	        
 			21	        while (m>0)
 			22	        {
