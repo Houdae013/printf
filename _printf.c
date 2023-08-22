@@ -34,6 +34,7 @@ int _case(const char *format, int i, va_list args)
 	else if (format[(i + 1)] == 'd' || format[(i + 1) =='i')
 	{
 		d = va_arg(args,int);
+		n=n+_putintg(d);
 
 	}	
 	else if (format[i + 1] == 'b')
