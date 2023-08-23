@@ -15,7 +15,10 @@ int _putintg(int d)
 		return (_putstr("-2147483648"));
 
 	if (d == 0)
+	{	
+		_putchar('0');
 		return (1);
+	}
 	while (d != 0)
 	{
 		if (d < 0)
