@@ -12,7 +12,7 @@ int _putintg(int d)
 	char s[100];
 
 	if (d == -2147483648)
-		return(_putstr("-2147483648"));
+		return (_putstr("-2147483648"));
 
 	if (d == 0)
 		return (1);
