@@ -14,7 +14,7 @@ int _putintg(int d)
 	if (d == -2147483648)
 		return (_putstr("-2147483648"));
 
-	if (d == 2147483648)
+	if (d == 2147483647)
 		return (_putstr("2147483648"));
 
 	if (d == 0)
